@@ -1,0 +1,386 @@
+@charset "utf-8";
+/*共通*/
+*{
+    box-sizing: border-box;
+}
+
+header{
+    height: 65px;
+    width :100%;
+    background-color: rgba(34,49,52,0.9);
+    position: fixed;  
+    top: 0;
+    z-index: 10;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*ヘッダー*/
+
+.header-logo{
+    float: left;
+    font-size: 20px;
+    font-weight: bolder;
+    color: orange;
+    padding: 20px 20px;
+}
+
+.header-right a{
+    float: right;
+    font-weight: bolder;
+    color: white;
+    font-size: 20px;
+    padding: 20px 20px;
+}
+
+
+.profile{
+    padding: 50px 20px 50px 20px;
+}
+
+/*トップページ*/
+.introduction{
+    font-weight: bolder;
+    color: rgb(45, 123, 121);
+    padding: 75px 80px;
+}
+
+.profile-prelist{
+    border-bottom: solid;
+}
+
+.profile-list{
+    background-color: blanchedalmond;
+    font-size: 20px;
+}
+
+.blog-introduction{
+    font-weight: bolder;
+}
+
+.around-opinion{
+    font-weight: bolder;
+}
+
+.around-opinion h2{
+    font-weight: bolder;
+    color: rgb(45, 123, 121);
+}
+
+.around-opinion a{
+    color: black;
+}
+
+.opinion{
+    background-color: rgba(101, 222, 247, 0.9);
+}
+
+.article p{
+    font-weight: bolder;
+    font-size: 30px;
+    padding:  0px 20px;
+}
+/*カード */
+.card-group{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    max-width: 640px;
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.card-group h1 {
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 640px;
+    width: 90%;
+}
+.card-group > :nth-child(2n){
+    margin-left: 5%;
+}
+.card-group > :nth-child(n+3){
+    margin-top: 20px;
+}
+.card{
+    width: calc((100% - 5% * 1) / 2);
+    height: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,.2)
+}
+.card__imgframe{
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.card__textbox{
+    width: 100%;
+    height: auto;
+    padding: 20px 18px;
+    background: #fff;
+    box-sizing: border-box;
+}
+.card__textbox > * + *{
+margin-top: 10px;
+}
+.card__textbox a {
+    color: #333;
+}
+.card__textbox a:hover {
+    color: #606770;
+}
+.card__boxtext{
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 125%;
+}
+
+.card__titletext{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 125%;
+}
+
+.card__overviewtext{
+    font-size: 12px;
+    line-height: 125%;
+    color: #606770;
+}
+/*ボタン*/
+.btn{
+    padding: 8px 24px;
+    display: inline-block;
+    opacity: 0.8;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bolder;
+    border-bottom: 1px solid silver;
+}
+
+.btn:hover{
+    opacity: 1;
+}
+
+.btn a{
+    color: black;
+}
+
+.fa{
+    margin-right: 5px;
+}
+
+
+
+#submit-btn{
+    display: inline-block;
+    padding: 14px 140px;
+    background-color: #5dca88;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+.faq-wrapper{
+    background-color: #e6ecf0;
+    text-align: center;
+    padding-bottom: 80px;
+    color: #5f5d60;
+}
+
+#faq-list{
+    width: 500px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+.faq-list-item{
+    margin: 10px;
+    border-bottom: 1px solid slategray;
+    position: relative;
+    cursor: pointer;
+    text-align: left;
+}
+
+.faq-list-item h3{
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.faq-list-item span{
+    position: absolute;
+    top: 0;
+    right: 5px;
+    color:black;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.answer{
+    font-size: 12px;
+    display: none;   /*非表示にしておく*/
+    padding: 5px 0px;
+    margin-bottom: 15px;
+}
+
+.form-modal-wrapper{
+    display: none;  /*初期状態で見れないようにする*/
+    position: fixed;  /*永遠固定状態位置に*/
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 100;
+}
+
+.modal{
+    position: absolute;
+    top: 20%;
+    left: 34%;
+    background-color: #e6ecf0;
+    padding: 20px 0 40px;
+    border-radius: 10px;
+    width: 450px;
+    height: auto;
+    text-align: center;
+}
+
+.fa-times{
+    position: absolute;
+    top: 12%;
+    right: 12px;
+    color: rgba(128,128,128,0.46);
+    cursor: pointer;
+}
+
+.opinion-introduction{
+    font-weight: bolder;
+    color: rgb(45, 123, 121);
+    border-top: 1px solid silver;
+    padding-top: 10px;
+}
+
+
+
+.opinion-form{
+    padding: 50px 50px;
+}
+
+.opinion-form form{
+    margin: 20px 20px;
+}
+
+.opinion-form textarea{
+    margin: 10px 10px;
+    padding: 10px;
+    border: 1px solid silver;
+    border-radius: 3px;
+}
+
+.opinion-form h2{
+    border-bottom: 1px solid silver;
+    letter-spacing: 1px;
+}
+
+#submit-btn{
+    display: inline-block;
+    padding: 20px 160px;
+    background-color: rgba(101, 222, 247, 0.9);
+    border: none;
+    border-radius: 3px;
+    color: white;
+    margin: 20px 10px;
+    cursor: pointer;
+}
+
+.list-introduction{
+    font-weight: bolder;
+    color: rgb(45, 123, 121);
+    padding: 70px 60px;
+    border-bottom: 1px solid silver;
+}
+
+.posts-index-item {
+    padding: 20px 30px;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 2px 6px #c1ced7;
+}
+
+.posts-show-item {
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 2px 6px #c1ced7;
+    overflow: hidden;
+}
+
+.posts-show-item .post-user-name a {
+    vertical-align: middle;
+    font-size: 24px;
+    margin-left: 15px;
+  }
+  
+.posts-show-item p {
+    font-size: 24px;
+    margin: 20px 0;
+}
+  
+.post-time {
+    color: #8899a6;
+    margin-bottom: 10px;
+}
+  
+
+
+.footer-logo a{
+    float: left;
+    font-size: 15px;
+    font-weight: bolder;
+    color: rgb(256, 128, 100);
+    padding: 20px 20px;
+}
+
+footer{
+    border-top: 1px solid rgba(238, 238, 238, 0.687);
+    height: 65px;
+    width :100%;
+    margin-top: 10px;
+
+}
+
+
+.header-right footer{
+    float: right;
+    font-size: 20px;
+    padding: 20px 20px;
+}
+
+
+
+
+
+
+
+
+
